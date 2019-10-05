@@ -786,7 +786,7 @@ struct m1AbstractSchedule
 	        set i = i + 1
 	    endloop
 	    if( fightingQty <= 1 ) then
-		    //TODO 结束游戏
+		    // 结束游戏
 			call DisableTrigger( GetTriggeringTrigger() )
 			call ForceCinematicSubtitles( true )
 			call StartSound(gg_snd_audio_jushiwushuang)
@@ -802,7 +802,7 @@ struct m1AbstractSchedule
 		        set i = i + 1
 		    endloop
 		else
-			//TODO 由于有玩家离开，所以要将指向他的目标转去默认
+			// 由于有玩家离开，所以要将指向他的目标转去默认
 			set i = 1
 		    loop
 		        exitwhen i > player_max_qty
@@ -1188,7 +1188,7 @@ struct m1AbstractSchedule
 		local group tempGroup = null
 		local unit tempUnit = null
 		local integer i = 0
-		//TODO 战略
+		// 战略
 		if( itType == 'I03S' )then	//战略 - 升级采金1
 			set Player_gold_award[playerIndex] = Player_gold_award[playerIndex]+1
 			call hplayer.addTotalGoldCost(players[playerIndex],250)
@@ -1308,7 +1308,7 @@ struct m1AbstractSchedule
 			call hmsg.echoTo( players[playerIndex] , "士兵已力量爆发，发动更强力的攻击！！",0,0,0 )
 			call StartSound(gg_snd_audio_wanbao)
 		endif
-		//TODO 派遣/升级
+		// 派遣/升级
 		if( whichRace == RACE_HUMAN )then
 			set i = 1
 			loop
